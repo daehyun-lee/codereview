@@ -36,11 +36,11 @@ int main(int argc, char* argv[]){
 			pushQueue(&priQueue,customNumber);
 		}
 		else{
-			pushQueue(&priQueue,-1);
+			pushQueue(&priQueue,-500);
 		}
 	}
 	else{
-		pushQueue(&priQueue,-1);
+		pushQueue(&priQueue,-500);
 	}
 
 	//empty & size
