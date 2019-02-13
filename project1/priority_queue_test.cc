@@ -19,8 +19,10 @@ TEST(PriorityQueueTest,Trivial){
 	expTarget.push(3);
 	expTarget.push(8);
 	expTarget.push(5);
+	expTarget.push(-5);
+	expTarget.push(-500);
 	
-	ASSERT_EQ(expTarget.size(),6); // Pushed 6 elements
+	ASSERT_EQ(expTarget.size(),8); // Pushed 6 elements
 	ASSERT_EQ(expTarget.top(),8);  // The highest pushed value is 8
 	ASSERT_FALSE(expTarget.empty()); // it must not empty
 
@@ -31,9 +33,11 @@ TEST(PriorityQueueTest,Trivial){
 	expTarget.pop();
 	
 	ASSERT_EQ(expTarget.top(),3);
-	ASSERT_EQ(expTarget.size(),3);
+	ASSERT_EQ(expTarget.size(),5);
 	ASSERT_FALSE(expTarget.empty());
 
+	expTarget.pop();
+	expTarget.pop();
 	expTarget.pop();
 	expTarget.pop();
 	expTarget.pop();
